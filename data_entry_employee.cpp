@@ -5,22 +5,21 @@
     make this program for 5 members.
 */
 
-
 #include<iostream>
 using namespace std;
 
 class employee
 {
-    private:                     // by default private
+    private:
         int emp_id;
         string name;
         float salary;
-    public:                      // by default public
+    public:
         void get();
         void show();
 };
 
-void employee::get()            
+void employee::get()
 {
     cout<<"Enter the employee id: ";
     cin>>emp_id;
@@ -33,26 +32,25 @@ void employee::get()
 
 void employee::show()
 {
-    if(salary>80000)    // if condition
+    if(salary>80000)
     {
         cout<<"showing the details of employee whose salary is > 80000"<<endl;
-        // cout<<"Employee id: "<<emp_id<<endl;
-        // cout<<"Employee name: "<<name<<endl;
-        // cout<<"Employee salary: "<<salary<<endl;
-        cout<<"Employee id: "<<emp_id<<" Employee name: "<<name<<" Employee salary: "<<salary<<endl;
+        cout<<"Employee id: "<<emp_id<<endl;
+        cout<<"Employee name: "<<name<<endl;
+        cout<<"Employee salary: "<<salary<<endl;
     }
 }
 
 int main()
 {
-    employee e[5];        // array of objects
-    for(int i=0;i<5;i++)    // for loop
+    employee e[5];
+    for(int i=0;i<5;i++)
     {
         e[i].get();
     }
     for(int i=0;i<5;i++)
     {
-        e[i].show();     // calling show function
+        e[i].show();
     }
     return 0;
 }
