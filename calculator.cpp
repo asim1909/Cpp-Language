@@ -8,25 +8,25 @@ using namespace std;
 
 class calculator
 {
-    private:
+    private:             // by default private
         int a,b;
-    public:
-        void get();
+    public:              // by default public
+        void get();      
         void add();
         void subs();
         void mul();
         void div();
 };
 
-void calculator::get()
+void calculator::get()       // scope resolution operator
 {
-    cout<<"Enter the value of a and b: ";
-    cin>>a>>b;
+    cout<<"Enter the value of a and b: ";      // cin>>a>>b;
+    cin>>a>>b;                                 // cout<<a<<b;
 }
 
-void calculator::add()
-{
-    cout<<"Add of "<<a<<" and "<<b<<" is "<<a+b<<endl;
+void calculator::add()       
+{ 
+    cout<<"Add of "<<a<<" and "<<b<<" is "<<a+b<<endl;          
 }
 
 void calculator::subs()
@@ -44,10 +44,10 @@ void calculator::div()
     cout<<"Div of "<<a<<" and "<<b<<" is "<<a/b<<endl;
 }
 
-int main()
+int main()            // main function
 {
-    calculator c;
-    c.get();
+    calculator c;    // object of class calculator
+    c.get(); 
     c.add();
     c.subs();
     c.mul();
