@@ -1,0 +1,21 @@
+// write a code to convert decimal to octal using manipulators
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n;
+    cout << "Enter the decimal number: ";
+    cin >> n;
+    int rem, oct = 0, i = 0;
+    while (n != 0)
+    {
+        rem = n % 8;
+        oct = oct + rem * pow(10, i);
+        i++;
+        n = n / 8;
+    }
+    cout << "The octal equivalent of the number is: " << oct << endl;
+    return 0;
+}
